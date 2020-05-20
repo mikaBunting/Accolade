@@ -25,3 +25,8 @@ The real website runs on ubuntu server on digital ocean, nginx, pm2 as a wrapper
 
 The url https://www.indickecukrarstvi.cz/en
 
+
+
+PS This stripped down version is not buildable and not runable.. since I didn't make it as a docker I can only give a source code not a running project. It's just for code showcase..
+
+~ Mika
