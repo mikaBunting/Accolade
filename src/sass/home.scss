@@ -1,0 +1,175 @@
+
+@font-face {
+    font-family: 'papyrus';
+    src:  url('papyrus.ttf')  format('truetype');
+    src:  url('papyrus.otf')   format("opentype");
+    src:  url('papyrus.woff')  format('woff');
+  }
+
+div.home--wrapper {
+    margin-top: 0 !important;
+    position: relative;
+    margin-bottom: 0 !important;
+
+    section.first {
+        // background-image: url(https://images.pexels.com/photos/362119/pexels-photo-362119.jpeg?cs=srgb&dl=indicky-mohanthal-sladkosti-362119.jpg&fm=jpg);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        height: 100vh !important;
+        position: relative;
+        margin-bottom: 0;
+
+        .home--ribbon {
+            max-width: 25vw;
+            margin-top: 5rem;
+        }
+          .slider {
+            font-size: 2rem;
+            width: 12.5rem;
+            height: 5rem;
+            background-color: orange;
+            text-align: center;
+            line-height: 5rem;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            margin-top: 3rem;
+            border: 1px solid orange;
+          }
+          .left {
+            position: absolute;
+            left: -50%;
+            right: 50%;
+            top: 0;
+            bottom: 0;
+            background:  #FFDF2B;
+            z-index: 3;
+            transform: skew(15deg);
+              transition: all 1s;
+          }
+          .right {
+            position: absolute;
+            right: -50%;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            background: #FFDF2B;
+            transform: skew(15deg);
+            transition: all 1s;
+          }
+          .slider:hover .right{
+            left: 150%;
+          }
+          .slider:hover .left{
+            right: 150%;
+          }
+          
+          .overlay {
+            position: relative;
+            top: 0;
+            text-transform: capitalize;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 1.4rem;
+            line-height: 5rem;
+            z-index: 5;
+            transition: all 0.1s;
+          }
+          .overlay::after {
+              content: "⮞";
+              visibility: hidden;
+              transition: opacity 1s;
+              opacity: 0;
+              position: absolute;
+              right: -1.4rem;
+              bottom: -1.7rem;
+          }
+        .slider:hover .overlay:after {
+            content: '⮞';
+            opacity: 1;
+            visibility: visible;
+            
+        }
+        .heading--wrapper {
+            position: absolute;
+            top: 20%;
+            text-align: center;            
+            width: 100%;
+            h1 {
+                font-family: 'papyrus';
+                font-size: 11vw;
+                color: #FB8102;
+                font-weight: 500;
+
+                text-shadow: orange 0 0 2px;
+            }
+            p {
+                font-family: 'papyrus';
+                font-size: 3vw;
+                color: #FAA913;
+                margin-top: 1.5rem;
+                text-shadow: rgb(209, 111, 31) 2px 2px 3px;
+                text-transform: lowercase;
+                span {
+                   
+                    position: relative;
+                    &:after {
+                        content: "ˇ";
+                        position: absolute;
+                        left: 0;
+
+                    }
+                }
+           }
+        }
+    }
+
+    .spacer {
+        padding: 0px;
+        height: 100px;
+        margin: 0px;
+        width: 100%;
+        display: block;
+        }
+
+    .parallax {
+        background-image: url("https://i1.wp.com/www.indianrecipeinfo.com/cooking/wp-content/uploads/2010/12/Soan-Papdi.jpg");
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .parallax-text {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+
+            .section--heading {
+                color: white;
+                font-size: 3rem;
+                text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+                &:after {
+                    background-color: white;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+                }
+
+            } 
+            .text {
+                color: white ;
+                text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            }
+            .button {
+                align-self: center;
+            }
+        }
+    }
+    
+
+}
+    
+

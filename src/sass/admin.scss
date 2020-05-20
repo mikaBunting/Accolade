@@ -1,0 +1,34 @@
+.admin--wrapper {
+    
+    table {
+        overflow-y: auto;
+        overflow-y: auto;
+        .product {
+            span {
+                padding: 0 0.6rem;
+            }
+        }
+        input {
+            width: 7rem;
+        }
+        .admin-order--wrapper.removed {
+            display: none;
+        }
+        .admin-order--wrapper {
+            .product {
+                white-space: nowrap;
+            }
+            .submit {
+                width: 2rem;
+                background-color: green;
+                color: white;
+                font-size: 1rem;
+                padding: 0.75rem 0;
+                text-align: center;
+            }
+        }
+        .edit-th {
+            width: 2rem;
+        }
+    }
+}

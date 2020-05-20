@@ -1,0 +1,90 @@
+.app--wrapper {
+
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 70%;
+        left: 0;
+        background-image: url('leaves.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 30%;
+        right: 0;
+        background-image: url('leaves-r.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 10rem;
+        min-width: 10rem;
+    }
+
+    .content--wrapper {
+        transition: flex-basis 0.4s;
+        flex-basis: 100%;
+        position: relative;
+        
+    }
+    .header {
+        transition: right 0.4s, background-color 1s;
+    }
+    .cart--wrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        left: 100%;
+        transition: left 0.4s, right 0.4s;
+        z-index: 5;
+    }
+}
+.app--wrapper.open-shop {
+
+    .content--wrapper {
+        flex-basis: 70%;
+        .header {
+            right: 30%;
+        }
+    }
+    .cart--wrapper {
+        left: 70%;
+        right: 0%;
+    }
+}
+
+.app--wrapper {
+    overflow-x: hidden;
+    display: flex;
+    position: relative;
+}
+.app--wrapper {
+    background-image: url('bg.png');
+}
+.main--wrapper > div{
+    margin-top: 8rem;
+    position: relative;
+    min-height: calc(100vh - 16rem);
+    margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+.app--wrapper.admin {
+    &:before, &:after {
+          
+          display: none;
+      }
+      #logo {
+          height: 7rem;
+      }
+  }

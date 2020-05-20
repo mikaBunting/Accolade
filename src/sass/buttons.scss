@@ -1,0 +1,105 @@
+.button {
+	background-color: #FFDF2B;
+	display: inline-block;
+	width: 12rem;
+	color: black;
+	height: 5rem;
+	text-align: center;
+	line-height: 5rem;
+	position: relative;
+    transition: font-size 2s;
+    font-size: 1.2rem;
+    cursor: pointer;
+	&:hover {
+		font-size: 1.6rem;
+		&:after {
+			width: calc(100%);
+		}
+		&:before {
+			height: calc(100%);
+		}
+		span {
+			&:after {
+				width: calc(100%);
+			}
+			&:before {
+				height: calc(100%);
+			}
+		}
+	}
+	&::after {
+		content: "";
+		width: 0px;
+		height: 4px;
+		background-color: black;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+		z-index: 2;
+		transition: width 1s;
+	}
+	&::before {
+		content: "";
+		width: 4px;
+		height: 0px;
+		background-color: black;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		display: block;
+		z-index: 2;
+		transition-delay: 2s;
+		transition: height 1s;
+    }
+    
+    & > span {
+        &:after {
+            content: "";
+            width: 0px;
+            height: 4px;
+            background-color: black;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            display: block;
+			z-index: 2;
+			color: rgb(129,36,157);
+            transition: width 1s;
+        }
+        &::before {
+            content: "";
+            width: 4px;
+            height: 0px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            display: block;
+            z-index: 2;
+            transition-delay: 2s;
+            transition: height 1s;
+        }
+    }
+    
+}
+
+.button-2 {
+	display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.3em solid black;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+	transition: all 0.2s;
+	left: 50px;
+}
+
+
+
+

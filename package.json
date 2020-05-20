@@ -1,0 +1,63 @@
+{
+  "name": "Accolade ",
+  "version": "1.0.0",
+  "description": "Accolade ",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src",
+    "watch-css": "node-sass-chokidar src/sass/main.scss -o ./static/ --watch --recursive --inline=false",
+    "run-server": "node mainServer.js --inline=false",
+    "dev": "concurrently --kill-others \"npm run watch-css\" \"npm run run-server\" \" npm run start\"",
+    "build": "webpack --optimize-minimize --inline=false",
+    "watch": "npm-watch"
+  },
+  
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.0.15",
+    "concurrently": "^5.1.0",
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^3.6.2",
+    "node-sass-chokidar": "^1.4.0",
+    "npm-run-all": "^4.1.5",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.1.1",
+    "redux-devtools-dock-monitor": "^1.1.0",
+    "redux-devtools-log-monitor": "^1.0.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "mysql": "^2.18.1",
+    "npm-watch": "^0.6.0",
+    "open": "^6.0.0",
+    "popper.js": "^1.14.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "sanitize": "^2.1.0"
+  },
+  "proxy": "http://localhost:8008"
+}

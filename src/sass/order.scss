@@ -1,0 +1,225 @@
+@import 'variables';
+.order--wrapper {
+    position: relative;
+    padding-bottom: 6rem;
+
+    .popover-content {
+        color: red;
+        font-size: 10px;
+    }
+    
+    .input-field{
+        outline: none;
+        border: none;
+        border-bottom: orange solid 2px;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    input:focus {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    .order__content--wrapper {
+        .row {
+            table, .order__form {
+                background-color: rgba(255,255,255,0.8);
+                padding: 0;
+                padding: 1.5rem;
+            }
+        }
+    }
+    .order__heading--wrapper {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 8rem;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 200%;
+            width: 50%;
+            left: auto;
+            right: auto;
+            top: -75%;
+            transform: rotate(-15deg);
+            background-image: url('heading_bg.svg');
+            background-size: 70%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+    .order__summary--wrapper {
+       
+        table {
+            thead {
+                
+                    border-bottom: 3px solid orange;
+                    margin-bottom: 2px;
+                
+            }
+
+            tfoot {
+                tr {
+                    border-top: 3px solid orange;
+                }
+            }
+        }
+    }
+
+    .order__form--wrapper {
+        .order__note--wrapper {
+            margin-top: 2rem;
+            .alert.alert-info {
+                background-color: rgba(255, 165, 0, 0.6);
+                border-color: orangered;
+            }
+
+        }
+
+        .order__form--button-wrapper {
+            margin-top: 1rem;
+        }
+        .order__form--name-wrapper , .order__form--lastname-wrapper , .order__form--email-wrapper , .order__form--phone-wrapper, .order__form--note-wrapper {
+            margin-bottom: 0.5rem;
+            display: flex;
+            input {
+                flex: 1;
+            }
+            textarea {
+                flex: 1;
+                height: 5rem;
+                border: orange solid 2px;
+                border-radius: 2px;
+            }
+            span:first-child {
+                display: inline-block;
+                white-space: nowrap;
+                width: 7rem;
+                &:after {
+                    content: ":"
+                }
+            }
+        }
+    }
+
+    @mixin button($bcolor,
+    $url,
+    $x1,
+    $y1,
+    $bor,
+    $col) {
+     background: $bcolor;
+     -webkit-mask: url($url);
+     mask: url($url);
+     -webkit-mask-size: $x1 $y1;
+     mask-size: $x1 $y1;
+     border: $bor;
+     color: $col;
+    }
+    .mas {
+        position: absolute;
+        color: #000;
+        text-align: center;
+        width: 101%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        position: absolute;
+        font-size: 20px;
+        margin-top: 8px;
+        overflow: hidden;
+       }
+       .button-container-2 {
+        position: relative;
+        height: 3rem;
+        width: 15rem;
+        overflow: hidden;
+        border: 1px solid #000;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        transition: 0.5s;
+        letter-spacing: 1px;
+       
+        button {
+         width: 101%;
+         height: 100%;
+         font-family: 'Lato', sans-serif;
+         font-weight: 300;
+         font-size: 20px;
+         letter-spacing: 1px;
+       
+         @include button(orange,
+         "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+         3000%,
+         100%,
+         none,
+         #fff);
+         cursor: pointer;
+         -webkit-animation: ani2 0.7s steps(29) forwards;
+         animation: ani2 0.7s steps(29) forwards;
+       
+         &:hover {
+          -webkit-animation: ani 0.7s steps(29) forwards;
+          animation: ani 0.7s steps(29) forwards;
+         }
+        }
+       }
+       @-webkit-keyframes ani2 {
+        from {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+       
+        to {
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+
+        }
+       }
+       
+       @keyframes ani {
+        from {
+         -webkit-mask-position: 0 0;
+         mask-position: 0 0;
+        }
+       
+        to {
+         -webkit-mask-position: 100% 0;
+         mask-position: 100% 0;
+        }
+       }
+       
+       @-webkit-keyframes ani2 {
+        from {
+         -webkit-mask-position: 100% 0;
+         mask-position: 100% 0;
+        }
+       
+        to {
+         -webkit-mask-position: 0 0;
+         mask-position: 0 0;
+        }
+       }
+       
+       @keyframes ani2 {
+        from {
+         -webkit-mask-position: 100% 0;
+         mask-position: 100% 0;
+        }
+       
+        to {
+         -webkit-mask-position: 0 0;
+         mask-position: 0 0;
+        }
+       }
+       
+           
+       
+       
+      
+}

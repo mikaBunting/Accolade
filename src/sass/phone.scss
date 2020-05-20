@@ -1,0 +1,67 @@
+@import 'variables'; 
+.phone {
+
+    
+    header {
+        .menu-icon {
+            display: block;
+        }
+        .cart-icon--wrapper{
+            padding-right: 1rem;
+            padding-left: 0.5rem;
+            flex: 0;
+            justify-self: flex-end;
+            span {
+                display: none;
+                margin-left: 0.3rem;
+            }
+        }
+    }
+    .home--wrapper section.first .heading--wrapper {
+    } 
+    .section--heading {
+        font-size: 2.5rem;
+    }
+        .order--wrapper{
+            .input-field {
+                width: 96%;
+            }
+            td {
+                white-space: nowrap;
+                padding: 0.4rem;
+            }
+            .order__heading--wrapper {
+                margin-bottom: 1.5rem;
+            }
+            .order--wrapper .order__heading--wrapper:before  {
+                width: 150%;
+            }
+        }
+
+}
+
+.app--wrapper.open-shop.phone {
+    
+
+    .content--wrapper {
+        flex-basis: 0%;
+        .header {
+            right: 100%;
+        }
+    }
+    .cart--wrapper {
+        left: 0;
+        right: 0%;
+        .cart__product--close {
+            font-size: 1.2rem;
+            padding-top: 0.4rem;
+        }
+    }
+   
+    
+}
+.app--wrapper.phone {
+    &:after, &::before {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,130 @@
+
+div.product-detail--wrapper {
+    font-family: 'open-sans', sans-serif;
+
+    margin-top: 10rem;
+
+
+    .store__note--wrapper {
+        margin-top: 2rem;
+        .alert.alert-info {
+            background-color: rgba(255, 165, 0, 0.6);
+            border-color: orangered;
+            color: black;
+        }
+
+    }
+
+    .product__allergen--wrapper {
+
+            span {
+                font-size: 1rem;
+                &::after {
+                    content: ", ";
+                }
+            }
+            span:last-child {
+                &::after {
+                    content: "";
+                }
+            }
+            span:first-child {
+                &::after {
+                    content: " ";
+                }
+            }
+    }
+    .product-detail--name {
+        text-decoration: underline;
+    }
+    .product-detail__image {
+        height: 60vh;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .product-detail--price {
+       font-size: 1.6rem;
+    }
+
+    .product--size {
+       border: 1px solid black;
+       padding: 0.5rem;
+       margin-right: 1rem;
+       cursor: pointer;
+    }
+    
+    .product--size.active {
+        background-color: lightgray;
+    }
+
+    .product-detail__button--add {
+        background-color: orange;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 1rem;
+        border: none;
+      }
+
+    .product__size--wrapper {
+        padding: 1rem;
+    }
+
+    .product-detail__quantity--wrapper {
+
+        .decrease-button { 
+            border: 2px solid lightgrey;
+            background-color: transparent;
+            font-size: 1rem;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 999px;
+            position: relative;
+        }
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            background-color: grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .increase-button {
+            border: 2px solid lightgrey;
+            background-color: transparent;
+            font-size: 1rem;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 999px;
+            position: relative;
+        }
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .input-field { 
+            outline: none;
+            border: none;
+            border-bottom: orange solid 2px;
+            width: 4rem;
+            background-color: transparent;
+            font-size: 1.7rem;
+            text-align: center;
+        }
+    }
+}
+
+
